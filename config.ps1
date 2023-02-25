@@ -9,7 +9,7 @@
 # Whether to do a dry run
 # 0: Convert - Default
 # 1: Dry run
-$dryRun = 1
+$dryRun = 0
 
 # Specify folder path that will contain your resulting Notes structure - Default: c:\temp\notes
 $notesdestpath = 'C:\Users\zech011\win-repos\others\ConvertOneNote2MarkDown\output'
@@ -42,7 +42,7 @@ $prefixFolders = 1
 # Specify a value between 32 and 255 as the maximum length of markdown file names, and their folder names (only when using subfolders for subpages (e.g. Page\Subpage.md)). File and folder names with length exceeding this value will be truncated accordingly.
 # NOTE: If you are using prefixes for subpages (e.g. Page_Subpage.md), it is recommended to set this to at 100 or more.
 # Default: 32
-$mdFileNameAndFolderNameMaxLength = 32
+$mdFileNameAndFolderNameMaxLength = 255
 
 # Whether to store media in single or multiple folders
 # 1: Images stored in single 'media' folder at Notebook-level - Default
@@ -61,13 +61,13 @@ $medialocation = 1
 #   markdown_strict+simple_tables-multiline_tables-grid_tables+pipe_tables
 # Default:
 #   markdown-simple_tables-multiline_tables-grid_tables+pipe_tables
-$conversion = 'markdown-simple_tables-multiline_tables-grid_tables+pipe_tables-bracketed_spans+native_spans+startnum'
-#$conversion = 'markdown_mmd-simple_tables-multiline_tables-grid_tables+pipe_tables-mmd_link_attributes'
+$conversion = 'markdown-simple_tables-multiline_tables-grid_tables+pipe_tables-link_attributes-raw_html+native_spans+startnum'
+#$conversion = 'markdown_mmd-simple_tables-multiline_tables-grid_tables+pipe_tables-link_attributes-raw_html'
 
 # Whether to include page timestamp and separator at top of document
 # 1: Include - Default
 # 2: Don't include
-$headerTimestampEnabled = 1
+$headerTimestampEnabled = 2
 
 # Whether to clear double spaces between bullets, non-breaking spaces from blank lines, and '>` after bullet lists
 # 1: Clear double spaces in bullets - Default
@@ -83,7 +83,7 @@ $keepescape = 1
 # Whether to use Line Feed (LF) or Carriage Return + Line Feed (CRLF) for new lines
 # 1: LF (unix) - Default
 # 2: CRLF (windows)
-$newlineCharacter = 1
+$newlineCharacter = 2
 
 # Whether to include a PDF export alongside the markdown file
 # 1: Don't include PDF - Default

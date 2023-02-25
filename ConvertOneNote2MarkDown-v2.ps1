@@ -916,6 +916,7 @@ Function New-SectionGroupConversionConfig {
                                         searchRegex = '^\s*'
                                         replacement = & {
                                             $heading = "# $( $pageCfg['object'].name )"
+                                            $heading += "`n`n"
                                             if ($config['headerTimestampEnabled']['value'] -eq 1) {
                                                 $heading += "`n`nCreated: $(  $pageCfg['dateTime'].ToString('yyyy-MM-dd HH:mm:ss zz00') )"
                                                 $heading += "`n`nModified: $(  $pageCfg['lastModifiedTime'].ToString('yyyy-MM-dd HH:mm:ss zz00') )"
