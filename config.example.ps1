@@ -9,15 +9,15 @@
 # Whether to do a dry run
 # 0: Convert - Default
 # 1: Dry run
-$dryRun = 0
+$dryRun = 1
 
 # Specify folder path that will contain your resulting Notes structure - Default: c:\temp\notes
-$notesdestpath = 'c:\temp\notes'
+$notesdestpath = 'C:\Users\zech011\win-repos\others\ConvertOneNote2MarkDown\output'
 
 # Specify a notebook name to convert
 # '': Convert all notebooks - Default
 # 'mynotebook': Convert specific notebook named 'mynotebook'
-$targetNotebook = ''
+$targetNotebook = 'Recipes'
 
 # Whether to create new word .docx or reuse existing ones
 # 1: Always create new .docx files - Default
@@ -61,7 +61,8 @@ $medialocation = 1
 #   markdown_strict+simple_tables-multiline_tables-grid_tables+pipe_tables
 # Default:
 #   markdown-simple_tables-multiline_tables-grid_tables+pipe_tables
-$conversion = 'markdown-simple_tables-multiline_tables-grid_tables+pipe_tables'
+$conversion = 'markdown-simple_tables-multiline_tables-grid_tables+pipe_tables-bracketed_spans+native_spans+startnum'
+#$conversion = 'markdown_mmd-simple_tables-multiline_tables-grid_tables+pipe_tables-mmd_link_attributes'
 
 # Whether to include page timestamp and separator at top of document
 # 1: Include - Default
